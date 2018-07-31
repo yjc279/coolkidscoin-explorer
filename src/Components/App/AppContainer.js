@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { injectGlobal } from "styled-components";
 import AppPresenter from "./AppPresenter";
 import reset from "styled-reset";
+import typography from "../../typography";
 
 
 const baseStyles = () => injectGlobal`
-    ${reset}
+    ${reset};
+    ${typography};
 `;
 
-class App extends Component {
+class AppContainer extends Component {
     render () {
         baseStyles();
         return <AppPresenter />;
     }
 }
 
-export default App;
+export default AppContainer;
